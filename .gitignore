@@ -1,0 +1,5 @@
+*.suo
+Imported/SystemWeaverClientAPI.dll
+Imported/SystemWeaverClientAPI.XML
+Project/bin/
+Project/obj/

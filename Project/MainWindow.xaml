@@ -1,0 +1,14 @@
+﻿<Window x:Class="SystemWeaver.ApplicationFrameworkDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sw="clr-namespace:Systemite.SystemWeaver.Controls.UserControls;assembly=Systemite.SystemWeaver.Controls"
+        Title="SystemWeaver application demo" 
+		Height="600" Width="800"
+		WindowStartupLocation="CenterScreen">
+	<Grid>
+		<sw:ApplicationUserControl Name="appControl"
+								   ApplicationHeader="SystemWeaver application demo"
+								   WelcomeHeader="Welcome!"
+								   WelcomeBody="This is an example of how to use the application framework." />
+	</Grid>
+</Window>
