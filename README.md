@@ -28,7 +28,7 @@ To build this project you need to get the SystemWeaverClientAPI.dll and put it i
 In our demo the name of this custom user control is `ContentUserControl`.
 
 * Create your control, we choose to inherit from `UserControl`.
-* Register you control with the framework:
+* Register your control with the framework:
 ```csharp
 appControl.AddTab("Content", CreateContentControl, true);
 ```
