@@ -6,7 +6,7 @@ There is often a need to throw together a simple SystemWeaver application for a 
 
 ## Building
 
-To build this project you need to get the SystemWeaverClientAPI.dll and put it in the Imported directory.
+To build this project you need to get the SystemWeaverClientAPI.dll and put it in the Imported directory. This file is provided by Systemite if you want to start developing on the SystemWeaver platform.
 
 
 ## How to create your own application
@@ -32,14 +32,15 @@ In our demo the name of this custom user control is `ContentUserControl`.
 ```csharp
 appControl.AddTab("Content", CreateContentControl, true);
 ```
-where `CreateContentControl` is a method that returns the control that you are created.
+where `CreateContentControl` is a method that returns the control that you have created. The return type of this method should be `Control` to match the signature of the `AddTab` argument.
+
 * The login-control can remember your logins by assigning a `ILoginInfoManager`
 ```csharp
 appControl.LoginInfoManager = new FileLoginInfoManager("...");
 ```
 You can implement your own `ILoginInfoManager` or use the supplied `FileLoginInfoManager` which stores the login info in a file.
-* Build and run. After successful login the factory method will be called and create an instance of your control which will be shown in a tab.
+* Build and run. The main window with the login tab provided by the framework will start. After successful login the factory method will be called and create an instance of your control which will be shown in a tab.
 
-# Note
+## Note
 
 * This example uses the application framework. If you just want the login functionality, it is contained in its own control.
